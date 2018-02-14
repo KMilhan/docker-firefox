@@ -1,46 +1,7 @@
 Firefox
 =======
 
-Unofficial build of Firefox 46 running within a docker container and rendered by the local X Server.
-
-Changelog
----------
-```
-v2.0
-* Version bumped to 46
-
-v1.9
-* Version bumped to 43
-
-v1.8
-* Version bumped to 42.
-
-v1.7
-* Version bumped to 41.
-
-v1.6
-* Optional environment variables 'ARGS' and 'URL' can now be passed into the container. For example: -e ARGS=-jsconsole -e URL=http://www.docker.com
-
-v1.5
-* Firefox 36 upgraded to 37.
-
-v1.4
-* Automatic bookmark population by host mounting additional config.
-  I have included the sample config in my [GitHub](https://github.com/chrisdaish/docker-firefox/tree/master/configFiles).
-
-v1.3
-* Added (Oracle) Java support.
-* Additional configuration files can now be mounted inside the container (see example below).
-
-v1.2
-* Added audio passthrough, however this requires the --privileged argument to be set. This should be used with caution.
-
-v1.1
-* Added (Adobe) Flash support.
-
-v1.0
-* User permissions now correlate between host and container. This allows Firefox downloads to be saved back to the host system by passing in the local users uid/gid as environment variables.
-```
+Unofficial build of Firefox running within a docker container and rendered by the local X Server.
 
 Launch Command
 ---------------
