@@ -1,20 +1,19 @@
-FROM ubuntu:latest
-
-MAINTAINER Chris Daish <chrisdaish@gmail.com>
+FROM ubuntu:bionic
 
 ENV DEBIAN_FRONTEND noninteractive
-
-COPY AptSources /etc/apt/sources.list.d/
-
 
 RUN useradd -m firefox; \    
     apt-get update; \
     apt-get install -y --no-install-recommends  firefox \
                                                 dbus-x11 \
-                                                adobe-flashplugin \
                                                 libxext-dev \
                                                 libxrender-dev \
-                                                libxtst-dev; \
+                                                libxtst-dev\
+                                                fonts-noto-cjk \
+                                                fonts-noto-cjk-extra \
+                                                curl \
+                                                wget \
+                                                emacs-nox ; \
     rm -rf /var/lib/apt/lists/*
 
 COPY start-firefox.sh /tmp/
